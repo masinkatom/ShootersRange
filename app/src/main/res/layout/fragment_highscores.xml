@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HighscoresFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center"
+            android:text="Highscores:"
+            android:textSize="45sp"
+            app:fontFamily="monospace" />
+
+        <Button
+            android:id="@+id/btnClearScores"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.1"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:fontFamily="monospace"
+            android:text="Vymaž tabuľku"
+            android:textSize="30sp" />
+
+        <ListView
+            android:id="@+id/lvHighScores"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.55" >
+
+        </ListView>
+
+        <Button
+            android:id="@+id/btnMenu2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.2"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:fontFamily="monospace"
+            android:text="Menu"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.shootersrange.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_pocetHracovFragment"
+            app:destination="@id/pocetHracovFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_highscoresFragment"
+            app:destination="@id/highscoresFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/highscoresFragment"
+        android:name="com.example.shootersrange.HighscoresFragment"
+        android:label="fragment_highscores"
+        tools:layout="@layout/fragment_highscores" >
+        <action
+            android:id="@+id/action_highscoresFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pocetHracovFragment"
+        android:name="com.example.shootersrange.PocetHracovFragment"
+        android:label="fragment_pocet_hracov"
+        tools:layout="@layout/fragment_pocet_hracov" >
+        <action
+            android:id="@+id/action_pocetHracovFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_pocetHracovFragment_to_meno_HracaFragment"
+            app:destination="@id/meno_HracaFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/meno_HracaFragment"
+        android:name="com.example.shootersrange.Meno_HracaFragment"
+        android:label="fragment_meno__hraca"
+        tools:layout="@layout/fragment_meno__hraca" >
+        <action
+            android:id="@+id/action_meno_HracaFragment_to_pre_gameFragment"
+            app:destination="@id/pre_gameFragment" />
+        <action
+            android:id="@+id/action_meno_HracaFragment_to_pocetHracovFragment"
+            app:destination="@id/pocetHracovFragment" />
+        <argument android:name="pocetHracovArg"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/pre_gameFragment"
+        android:name="com.example.shootersrange.Pre_gameFragment"
+        android:label="fragment_pre_game"
+        tools:layout="@layout/fragment_pre_game" >
+        <action
+            android:id="@+id/action_pre_gameFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_pre_gameFragment_to_statsFragment"
+            app:destination="@id/statsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.shootersrange.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_pre_gameFragment"
+            app:destination="@id/pre_gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.example.shootersrange.StatsFragment"
+        android:label="fragment_stats"
+        tools:layout="@layout/fragment_stats" >
+        <action
+            android:id="@+id/action_statsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="pocetKolArg"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

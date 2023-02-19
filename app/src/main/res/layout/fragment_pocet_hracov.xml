@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PocetHracovFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/LabelMeno"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:fontFamily="monospace"
+            android:gravity="bottom|center_horizontal"
+            android:text="Zadaj počet hráčov:"
+            android:textSize="45sp" />
+
+        <EditText
+            android:id="@+id/EditPocetHracov"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="0"
+            android:inputType="numberSigned"
+            android:textAlignment="center"
+            android:textSize="45sp" />
+
+        <Button
+            android:id="@+id/btnNextPocetHracov"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:fontFamily="monospace"
+            android:text="Ďalej"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+</FrameLayout>

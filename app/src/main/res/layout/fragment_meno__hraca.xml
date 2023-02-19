@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Meno_HracaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/LabelMeno"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:fontFamily="monospace"
+            android:gravity="bottom|center_horizontal"
+            android:text="Zadaj meno hráča 1:"
+            android:textSize="45sp" />
+
+        <EditText
+            android:id="@+id/EditMenoHraca"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="xXmas1nkaSVK"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="45sp" />
+
+        <Button
+            android:id="@+id/btnNextMenoHraca"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:fontFamily="monospace"
+            android:text="Ďalej"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+</FrameLayout>
